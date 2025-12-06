@@ -103,6 +103,10 @@ void remove_roll(
 void insert_new_valids(std::vector<std::vector<int>>& grid,
     std::unordered_set<uint64_t>& valid_rolls,
     const std::unordered_set<uint64_t>& global_roll_set) {
+    // NOTE: I just realized that this is stupid
+    // Just iterate over global_roll set bruh
+    // too lazy tho
+
     auto line_width = grid[0].size();
     for (int i = 1; i < grid.size()-1; i++) {
         for (int j = 0; j < line_width; j++) {
